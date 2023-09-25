@@ -1,0 +1,1 @@
+console.log("Olá! Estou testando o terminal e o nano, editor de texto");
