@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pedidos</title>
+</head>
+<body>
+  <h1>Pedidos</h1>
+
+  <div id="pedidos-container"></div>
+
+  <form id="pedido-form">
+    <h2>Novo Pedido</h2>
+    <label for="item">Item:</label>
+    <input type="text" id="item" required>
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" required>
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <h2>Pedido Atual</h2>
+  <div id="pedido-container"></div>
+
+  <button id="finalizar-pedido">Finalizar Pedido</button>
+  <script src="scriptpedidos.js"></script>
+</body>
+</html>

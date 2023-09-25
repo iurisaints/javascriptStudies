@@ -1,0 +1,59 @@
+{
+  "pedidos": [
+    {
+      "id": 1,
+      "item": "Pizza",
+      "quantidade": 2
+    },
+    {
+      "id": 2,
+      "item": "Hambúrguer",
+      "quantidade": 1
+    },
+    {
+      "id": 3,
+      "item": "Sorvete",
+      "quantidade": 3
+    },
+    {
+      "id": 4,
+      "item": "Salada",
+      "quantidade": 1
+    },
+    {
+      "id": 5,
+      "item": "Batata frita",
+      "quantidade": 2
+    },
+    {
+      "id": 6,
+      "item": "Macarrão",
+      "quantidade": 1
+    },
+    {
+      "id": 7,
+      "item": "Sushi",
+      "quantidade": 4
+    },
+    {
+      "id": 8,
+      "item": "Frango grelhado",
+      "quantidade": 2
+    },
+    {
+      "id": 9,
+      "item": "Cachorro-quente",
+      "quantidade": 1
+    },
+    {
+      "id": 10,
+      "item": "Lasanha",
+      "quantidade": 3
+    },
+    {
+      "item": "Salada Caesar",
+      "quantidade": 1,
+      "id": 11
+    }
+  ]
+}

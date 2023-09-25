@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservas</title>
+    <link rel="stylesheet" type="text/css" href="stylereservas.css">
+</head>
+<body>
+    <h2>Fazer uma reserva</h2>
+
+    <form id="reserva-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" required>
+
+        <label for="horario">Horário:</label>
+        <input type="time" id="horario" required>
+
+        <button type="submit">Fazer Reserva</button>
+    </form>
+
+    <button onclick="exibirReservas()">Atualizar Reservas</button>
+
+    <h1>Reservas Feitas:</h1>
+
+    <div id="reservas-container"></div>
+
+    <script src="scriptreservas.js"></script>
+</body>
+</html>

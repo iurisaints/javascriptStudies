@@ -1,0 +1,18 @@
+[
+    {"id": 1, "name": "Hambúrguer", "description": "Delicioso hambúrguer caseiro", "price": 15.99},
+    {"id": 2, "name": "Pizza", "description": "Pizza tradicional de margherita", "price": 19.99},
+    {"id": 3, "name": "Salada Caesar", "description": "Salada fresca com molho Caesar", "price": 12.99},
+    {"id": 4, "name": "Sushi Combo", "description": "Combinação de sushi variado", "price": 24.99},
+    {"id": 5, "name": "Macarrão Alfredo", "description": "Macarrão com molho Alfredo cremoso", "price": 14.99},
+    {"id": 6, "name": "Frango Grelhado", "description": "Peito de frango grelhado com legumes", "price": 16.99},
+    {"id": 7, "name": "Sanduíche de Peixe", "description": "Sanduíche de peixe fresco", "price": 13.99},
+    {"id": 8, "name": "Taco Mexicano", "description": "Taco tradicional mexicano", "price": 9.99},
+    {"id": 9, "name": "Sopa do Dia", "description": "Sopa caseira do dia", "price": 7.99},
+    {"id": 10, "name": "Bife com Fritas", "description": "Bife suculento com batatas fritas", "price": 18.99},
+    {"id": 11, "name": "Camarão Grelhado", "description": "Camarões grelhados com molho especial", "price": 22.99},
+    {"id": 12, "name": "Torta de Maçã", "description": "Torta caseira de maçã", "price": 8.99},
+    {"id": 13, "name": "Panquecas", "description": "Panquecas macias com xarope de maple", "price": 10.99},
+    {"id": 14, "name": "Café da Manhã Completo", "description": "Ovos, bacon, torradas e café", "price": 12.99},
+    {"id": 15, "name": "Sorvete de Chocolate", "description": "Sorvete cremoso de chocolate", "price": 6.99}
+  ]
+  

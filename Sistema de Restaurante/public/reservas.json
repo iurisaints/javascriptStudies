@@ -1,0 +1,28 @@
+{
+  "reservas": [
+    {
+      "id": 1,
+      "nome": "teste",
+      "data": "2023-06-12",
+      "horario": "20:34"
+    },
+    {
+      "id": 2,
+      "nome": "aaaaaaa",
+      "data": "2023-06-12",
+      "horario": "21:35"
+    },
+    {
+      "nome": "Iuri Nascimento Santos",
+      "data": "2023-06-15",
+      "horario": "11:02",
+      "id": 3
+    },
+    {
+      "nome": "Iuri Nascimento Santos",
+      "data": "2023-06-14",
+      "horario": "12:17",
+      "id": 4
+    }
+  ]
+}

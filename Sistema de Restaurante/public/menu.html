@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardápio</title>
+    <style>
+        .menu-item {
+            margin-bottom: 10px;
+        }
+        .menu-item h3 {
+            margin: 0;
+        }
+        .menu-item p {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cardápio</h1>
+
+    <div id="menu-container"></div>
+
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'menu.json', true);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                const menuContainer = document.getElementById('menu-container');
+                const data = JSON.parse(xhr.responseText);
+
+                data.forEach(item => {
+                    const menuItem = document.createElement('div');
+                    menuItem.classList.add('menu-item');
+
+                    const itemName = document.createElement('h3');
+                    itemName.textContent = item.name;
+
+                    const itemDescription = document.createElement('p');
+                    itemDescription.textContent = item.description;
+
+                    const itemPrice = document.createElement('p');
+                    itemPrice.textContent = `Preço: R$ ${item.price.toFixed(2)}`;
+
+                    menuItem.appendChild(itemName);
+                    menuItem.appendChild(itemDescription);
+                    menuItem.appendChild(itemPrice);
+
+                    menuContainer.appendChild(menuItem);
+                });
+            } else {
+                console.error('Erro:', xhr.status);
+            }
+        };
+        xhr.send();
+    </script>
+</body>
+</html>

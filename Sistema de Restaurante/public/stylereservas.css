@@ -1,0 +1,12 @@
+/* Estilos para a página de reservas */
+h1 {
+    text-align: center;
+}
+
+#reserva-form {
+    margin-bottom: 20px;
+}
+
+#reservas-list {
+    margin-top: 20px;
+}
