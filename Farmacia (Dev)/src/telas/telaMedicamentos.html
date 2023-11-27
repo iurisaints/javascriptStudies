@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Medicamentos</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerenciamento de Medicamentos</h1>
+
+    <h2>Adicionar Medicamento</h2>
+    <form id="formAdicionar">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" name="preco" required>
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="text" id="quantidade" name="quantidade" required>
+
+        <button type="button" onclick="adicionarMedicamento()">Adicionar</button>
+    </form>
+
+    <h2>Listar Medicamentos</h2>
+    <ul id="listaMedicamentos"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Carregar a lista de medicamentos ao carregar a página
+            loadMedicamentosList();
+
+            // Adicionar um ouvinte de evento ao formulário para adicionar medicamentos
+            document.getElementById('formAdicionar').addEventListener('submit', function (event) {
+                event.preventDefault();
+                adicionarMedicamento();
+            });
+        });
+
+        function adicionarMedicamento() {
+            const id = document.getElementById('id').value;
+            const nome = document.getElementById('nome').value;
+            const preco = document.getElementById('preco').value;
+            const quantidade = document.getElementById('quantidade').value;
+
+            fetch('http://localhost:3000/api/medicamentos', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    id: id,
+                    nome: nome,
+                    preco: preco,
+                    quantidade: quantidade,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                loadMedicamentosList(); // Recarregar a lista após adicionar um medicamento
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function loadMedicamentosList() {
+            fetch('http://localhost:3000/api/medicamentos')
+                .then(response => response.json())
+                .then(data => displayMedicamentosList(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function displayMedicamentosList(data) {
+            const listaMedicamentos = document.getElementById('listaMedicamentos');
+            listaMedicamentos.innerHTML = '';
+
+            data.forEach(medicamento => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${medicamento.nome} - Preço: ${medicamento.preco} - Quantidade: ${medicamento.quantidade}`;
+                listaMedicamentos.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>

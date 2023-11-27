@@ -1,0 +1,16 @@
+{
+  "Medicamento": [
+    {
+      "id": 1,
+      "nome": "Teste",
+      "preco": "",
+      "quantidade": ""
+    },
+    {
+      "id": "2",
+      "nome": "Testando",
+      "preco": "10",
+      "quantidade": "12"
+    }
+  ]
+}
